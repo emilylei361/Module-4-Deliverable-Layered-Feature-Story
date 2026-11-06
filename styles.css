@@ -1,20 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
 :root{
-    --color-text:#404040;
+    /* Web font: Quicksand font
+    * Source: Google Fonts (variable)
+    * License: SIL Open Font License 1.1 (OFL-1.1)
+    * Available weights: 300-700
+    * Available styles: Italic, Normal 
+    * Font files: files are downloaded from Google Fonts
+    * External service requests: Requests Quicksand font style sheet from Google Fonts*/
+
+    /* Web font: Krona One font
+    * Source: Google Fonts (static)
+    * License: SIL Open Font License 1.1 (OFL-1.1)
+    * Available weights: 400
+    * Available styles: Normal 
+    * Font files: files are downloaded from Google Fonts
+    * External service requests: Requests Krona One font style sheet from Google Fonts */ 
+
+    /*Used for paragraphs*/
+    --font-body: "Quicksand", "Times New Roman", Helvetica, sans-serif;
+    /*Used for headings, subheadings, titles, nav links*/
+    --font-display: "Krona One", "Times New Roman", Helvetica, serif;
+
+    /*Sets basic font size, 16px*/
+    --base-font-size: 1rem;
+    /*Sets base line height, adds enough space*/
+    --line-height: 1.6; 
+
+    --leading-body: 1.6;
+
+    --color-text:#1f1f1f;
     --color-surface:#fff;
-    --color-action:#8c1d40;
-    --color-accent:#ffc627;
-    --color-border:#d0d0d0;
+    --primary-gradient: linear-gradient(135deg, var(--color-action), var(--color-accent1),var(--color-accent2));
+    --color-action:#007501;
+    --color-accent1:#f4b31c;
+    --color-accent2:#c20000;
+    --color-border:#747474;
+    --color-error:#b3261e;
     --color-muted:#5c6670;
     --space-3:1rem;
     --radius:.5rem;
     --measure:68ch;
-    --layer-base:0;
-    --layer-raised:10;
-    --layer-sticky:20;
-    --layer-overlay:30;
 }
 *,*::before,*::after{
-    box-sizing:border-box;
+    /* makes more intuitive sizing model for all elements*/ 
+    box-sizing: border-box; 
+    /* removes any default margins*/
+    margin: 0; 
+    /* removes any default padding*/
+    padding: 0; 
+    /* removes any default borders*/
+    border: 0; 
+    /* increases legibility of text, makes it look less cramped*/
+    line-height: 1.6;
 }
 html{
     scroll-behavior:smooth;
@@ -32,6 +70,14 @@ body{
     background:var(--color-action);
     color:#fff;
 }
+.feature-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;                 
+  background: url("black-african-celebration-hero-img.png") center / cover no-repeat;
+  opacity: 0.7;             
+  z-index: -1;
+} 
 .eyebrow{
     color:var(--color-accent);
     font-weight:700;
